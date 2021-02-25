@@ -1,0 +1,12 @@
+extends layouts/base.pug
+
+block title
+    title MY PROFILE
+
+block content
+    if members.length > 0
+        each member in members
+            h1 MY NAME IS : #{member.name}
+            h1 MY AGE IS : #{member.age}
+    else
+        NOTHING TO SHOW!

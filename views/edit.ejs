@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>EDIT PROFILE</title>
+    <link rel="stylesheet" href="/css/style.css" media="all"/>
+</head>
+
+<body>
+<h1>EDIT PROFILE !</h1>
+<form action='/user/edit/<%=member?member['id']:"0"%>' method='post'>
+    <label for='myname'>YOUR NAME : </label>
+    <input id='myname' type='text' name='name' value="<%=member?member['name']:""%>">
+    <label for='myage'>YOUR AGE : </label>
+    <input id='myage' type='text' name='age' value="<%=member?member['age']:""%>">
+    <input type='hidden' name='_csrf' value="<%= csrf %>">
+
+    <button type='submit'>SUBMIT</button>
+</form>
+</body>
+</html>

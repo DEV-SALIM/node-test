@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SHOW PROFILE</title>
+</head>
+<body>
+<a href="/user/all">ALL PROFILES</a><br /><br />
+    <% if (member) {%>
+        <ul>
+            <li>ID : <%= member['id'] %></li>
+            <li>NAME : <%= member['name'] %></li>
+            <li>AGE : <%= member['age'] %></li>
+            <li>CREATED AT : <%= member['createdAt'] %></li>
+            <li>UPDATED AT : <%= member['updatedAt'] %></li>
+        </ul>
+        <%
+    }else{ %>
+        NOTHING TO SHOW!
+    <% }%>
+<br /><br /><a href="/user/edit/<%= member['id'] %>">EDIT PROFILE</a>
+<br /><br /><a href="/user/delete/<%= member['id'] %>">DELETE PROFILE</a>
+</body>
+</html>

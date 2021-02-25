@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="/css/style.css" media="all"/>
+</head>
+
+<body>
+<h1>LOGIN !</h1>
+<h3><%=errors%></h3>
+<form action='/member/login' method='post'>
+    <label for='login'>LOGIN : </label>
+    <input id='login' type='text' name='login'>
+    <label for='password'>PASSWORD : </label>
+    <input id='password' type='password' name='password'>
+    <input type="hidden" name="_csrf" value="<%=csrfToken%>" />
+
+    <button type='submit'>CONNECT</button>
+</form>
+</body>
+</html>

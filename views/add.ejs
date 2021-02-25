@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>HELLO WORLD</title>
+    <link rel="stylesheet" href="/css/style.css" media="all"/>
+</head>
+
+<body>
+<h1>HELLO WORLD !</h1>
+<form action='/user/add' method='post'>
+    <label for='myname'>YOUR NAME : </label>
+    <input id='myname' type='text' name='name'>
+    <label for='myage'>YOUR AGE : </label>
+    <input id='myage' type='text' name='age'>
+    <input type='hidden' name='_csrf' value="<%= csrf %>">
+
+    <button type='submit'>SUBMIT</button>
+</form>
+</body>
+</html>

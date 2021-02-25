@@ -1,0 +1,13 @@
+extends layouts/base.pug
+
+block title
+    title HELLO WORLD
+
+block content
+    h1 HELLO WORLD !
+    form(action="/user/b", method='post')
+        label(for="myname") MY NAME :
+        input(id="myname", type="text", name="name")
+        label(for="myage") MY AGE :
+        input(id="myage", type="number", name="age")
+        button(type="submit") SUBMIT

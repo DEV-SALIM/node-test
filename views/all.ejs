@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ALL PROFILES</title>
+</head>
+<body>
+<a href="/user/add">ADD PROFILE</a><br /><br />
+    <% if (members.length > 0) {
+        for (let i = 0; i < members.length ; i++){ %>
+        <ul>
+            <li><a href="/user/show/<%= members[i]['id'] %>">PROFILE : <%= members[i]['id'] %></a></li>
+        </ul>
+        <% }
+    }else{ %>
+        NOTHING TO SHOW!
+    <% }%>
+</body>
+</html>
